@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create a Workout</title>
+</head>
+<body>
+<form action="{{ url_for('create', workout='legs') }}" method="POST">
+     {% if workoutname == "legs" %}
+
+    <!-- Squat -->
+    <label>Squat</label>
+    <ul>
+        <li>
+            <label>Enter the weight</label>
+            <input name="weight-squat" type="text"/>
+        </li>
+        <li>
+            <label>Enter the first rep</label>
+            <input name="rep1-squat" type="text"/>
+        </li>
+        <li>
+            <label>Enter the second rep</label>
+            <input name="rep2-squat" type="text"/>
+        </li>
+        <li>
+            <label>Enter the third rep</label>
+            <input name="rep3-squat" type="text"/>
+        </li>
+    </ul>
+
+    <!-- SplitSquat -->
+    <label>Split Squat</label>
+    <ul>
+        <li>
+            <label>Enter the weight</label>
+            <input name="weight-splitsquat" type="text"/>
+        </li>
+        <li>
+            <label>Enter the first rep</label>
+            <input name="rep1-splitsquat" type="text"/>
+        </li>
+        <li>
+            <label>Enter the second rep</label>
+            <input name="rep2-splitsquat" type="text"/>
+        </li>
+        <li>
+            <label>Enter the third rep</label>
+            <input name="rep3-splitsquat" type="text"/>
+        </li>
+    </ul>
+
+    <!-- LegPress -->
+    <label>Leg Press</label>
+    <ul>
+        <li>
+            <label>Enter the weight</label>
+            <input name="weight-legpress" type="text"/>
+        </li>
+        <li>
+            <label>Enter the first rep</label>
+            <input name="rep1-legpress" type="text"/>
+        </li>
+        <li>
+            <label>Enter the second rep</label>
+            <input name="rep2-legpress" type="text"/>
+        </li>
+        <li>
+            <label>Enter the third rep</label>
+            <input name="rep3-legpress" type="text"/>
+        </li>
+    </ul>
+
+    <!-- LegCurls -->
+    <label>Leg Curls</label>
+    <ul>
+        <li>
+            <label>Enter the weight</label>
+            <input name="weight-legcurls" type="text"/>
+        </li>
+        <li>
+            <label>Enter the first rep</label>
+            <input name="rep1-legcurls" type="text"/>
+        </li>
+        <li>
+            <label>Enter the second rep</label>
+            <input name="rep2-legcurls" type="text"/>
+        </li>
+        <li>
+            <label>Enter the third rep</label>
+            <input name="rep3-legcurls" type="text"/>
+        </li>
+    </ul>
+
+    <!-- CalfRaises -->
+    <label>Calf Raises</label>
+    <ul>
+        <li>
+            <label>Enter the weight</label>
+            <input name="weight-calfraises" type="text"/>
+        </li>
+        <li>
+            <label>Enter the first rep</label>
+            <input name="rep1-calfraises" type="text"/>
+        </li>
+        <li>
+            <label>Enter the second rep</label>
+            <input name="rep2-calfraises" type="text"/>
+        </li>
+        <li>
+            <label>Enter the third rep</label>
+            <input name="rep3-calfraises" type="text"/>
+        </li>
+    </ul>
+    <button type="submit">Add {{ workoutname }} workout</button>
+
+    {% endif %}
+
+</form>
+<form action="{{ url_for('create', workout='pull') }}" method="POST">
+
+    {% if workoutname == "pull" %}
+        <h2>Pull Workout</h2>
+
+        <!-- Barbell Rows -->
+        <label>Barbell Rows</label>
+        <ul>
+            <li><label>Enter the weight</label><input name="weight-barbellrows" type="text"/></li>
+            <li><label>Enter the first rep</label><input name="rep1-barbellrows" type="text"/></li>
+            <li><label>Enter the second rep</label><input name="rep2-barbellrows" type="text"/></li>
+            <li><label>Enter the third rep</label><input name="rep3-barbellrows" type="text"/></li>
+        </ul>
+
+        <!-- Pullups -->
+        <label>Pullups</label>
+        <ul>
+            <li><label>Enter the weight</label><input name="weight-pullups" type="text"/></li>
+            <li><label>Enter the first rep</label><input name="rep1-pullups" type="text"/></li>
+            <li><label>Enter the second rep</label><input name="rep2-pullups" type="text"/></li>
+            <li><label>Enter the third rep</label><input name="rep3-pullups" type="text"/></li>
+        </ul>
+
+        <!-- Seated Cable Rows -->
+        <label>Seated Cable Rows</label>
+        <ul>
+            <li><label>Enter the weight</label><input name="weight-seatedcablerows" type="text"/></li>
+            <li><label>Enter the first rep</label><input name="rep1-seatedcablerows" type="text"/></li>
+            <li><label>Enter the second rep</label><input name="rep2-seatedcablerows" type="text"/></li>
+            <li><label>Enter the third rep</label><input name="rep3-seatedcablerows" type="text"/></li>
+        </ul>
+
+        <!-- Face Pulls -->
+        <label>Face Pulls</label>
+        <ul>
+            <li><label>Enter the weight</label><input name="weight-facepulls" type="text"/></li>
+            <li><label>Enter the first rep</label><input name="rep1-facepulls" type="text"/></li>
+            <li><label>Enter the second rep</label><input name="rep2-facepulls" type="text"/></li>
+            <li><label>Enter the third rep</label><input name="rep3-facepulls" type="text"/></li>
+        </ul>
+
+        <!-- Hammer Curls -->
+        <label>Hammer Curls</label>
+        <ul>
+            <li><label>Enter the weight</label><input name="weight-hammercurls" type="text"/></li>
+            <li><label>Enter the first rep</label><input name="rep1-hammercurls" type="text"/></li>
+            <li><label>Enter the second rep</label><input name="rep2-hammercurls" type="text"/></li>
+            <li><label>Enter the third rep</label><input name="rep3-hammercurls" type="text"/></li>
+        </ul>
+
+        <!-- Dumbbell Curls -->
+        <label>Dumbbell Curls</label>
+        <ul>
+            <li><label>Enter the weight</label><input name="weight-dumbbellcurls" type="text"/></li>
+            <li><label>Enter the first rep</label><input name="rep1-dumbbellcurls" type="text"/></li>
+            <li><label>Enter the second rep</label><input name="rep2-dumbbellcurls" type="text"/></li>
+            <li><label>Enter the third rep</label><input name="rep3-dumbbellcurls" type="text"/></li>
+        </ul>
+            <button type="submit">Add {{ workoutname }} workout</button>
+
+    {% endif %}
+
+</form>
+<form action="{{ url_for('create', workout=workoutname) }}" method="POST">
+    {% if workoutname == "push" %}
+        <h2>Push Workout</h2>
+
+        <!-- Bench Press -->
+        <label>Bench Press</label>
+        <ul>
+            <li><label>Enter the weight</label><input name="weight-benchpress" type="text"/></li>
+            <li><label>Enter the first rep</label><input name="rep1-benchpress" type="text"/></li>
+            <li><label>Enter the second rep</label><input name="rep2-benchpress" type="text"/></li>
+            <li><label>Enter the third rep</label><input name="rep3-benchpress" type="text"/></li>
+        </ul>
+
+        <!-- Overhead Press -->
+        <label>Overhead Press</label>
+        <ul>
+            <li><label>Enter the weight</label><input name="weight-overheadpress" type="text"/></li>
+            <li><label>Enter the first rep</label><input name="rep1-overheadpress" type="text"/></li>
+            <li><label>Enter the second rep</label><input name="rep2-overheadpress" type="text"/></li>
+            <li><label>Enter the third rep</label><input name="rep3-overheadpress" type="text"/></li>
+        </ul>
+
+        <!-- Incline Dumbbell Press -->
+        <label>Incline Dumbbell Press</label>
+        <ul>
+            <li><label>Enter the weight</label><input name="weight-inclinedumbbellpress" type="text"/></li>
+            <li><label>Enter the first rep</label><input name="rep1-inclinedumbbellpress" type="text"/></li>
+            <li><label>Enter the second rep</label><input name="rep2-inclinedumbbellpress" type="text"/></li>
+            <li><label>Enter the third rep</label><input name="rep3-inclinedumbbellpress" type="text"/></li>
+        </ul>
+
+        <!-- Triceps Pushdowns -->
+        <label>Triceps Pushdowns</label>
+        <ul>
+            <li><label>Enter the weight</label><input name="weight-tricepspushdowns" type="text"/></li>
+            <li><label>Enter the first rep</label><input name="rep1-tricepspushdowns" type="text"/></li>
+            <li><label>Enter the second rep</label><input name="rep2-tricepspushdowns" type="text"/></li>
+            <li><label>Enter the third rep</label><input name="rep3-tricepspushdowns" type="text"/></li>
+        </ul>
+
+        <!-- Lateral Raises -->
+        <label>Lateral Raises</label>
+        <ul>
+            <li><label>Enter the weight</label><input name="weight-lateralraises" type="text"/></li>
+            <li><label>Enter the first rep</label><input name="rep1-lateralraises" type="text"/></li>
+            <li><label>Enter the second rep</label><input name="rep2-lateralraises" type="text"/></li>
+            <li><label>Enter the third rep</label><input name="rep3-lateralraises" type="text"/></li>
+        </ul>
+
+        <!-- Overhead Triceps Extensions -->
+        <label>Overhead Triceps Extensions</label>
+        <ul>
+            <li><label>Enter the weight</label><input name="weight-overheadtricepsextensions" type="text"/></li>
+            <li><label>Enter the first rep</label><input name="rep1-overheadtricepsextensions" type="text"/></li>
+            <li><label>Enter the second rep</label><input name="rep2-overheadtricepsextensions" type="text"/></li>
+            <li><label>Enter the third rep</label><input name="rep3-overheadtricepsextensions" type="text"/></li>
+        </ul>
+    <button type="submit">Add {{ workoutname }} workout</button>
+
+    {% endif %}
+</form>
+
+
+</form>
+</body>
+</html>

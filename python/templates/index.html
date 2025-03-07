@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>choose workout</title>
+</head>
+<body>
+
+        <a href="{{ url_for('create', workoutname='legs') }}">legs</a>
+        <!-- this is how you can pass which workout you want to add -->
+        <a href="{{ url_for('create', workoutname='push') }}">push</a>
+        <a href="{{ url_for('create', workoutname='pull') }}">pull</a>
+        <!-- how you submit a form <button type="submit">Add Book</button> -->
+
+</body>
+</html>
