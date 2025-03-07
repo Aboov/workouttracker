@@ -97,10 +97,9 @@ def login():
         password=request.form["password"]
         user=use(username,password,conn,Legs,Pull,Push)
         if user.searchforuser(User):
-            #needs to log in the user
-
-            pass
-        return render_template("index.html")
+            print("user was found")
+            return render_template("index.html")
+        return render_template("login.html")
     else:
         return render_template("login.html")
 @app.route("/signup", methods=["GET","POST"])
